@@ -6,19 +6,26 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "tsc --watch",
-    "lint": "eslint --ignore-path .eslintignore --ext .js,.ts .",
+    "lint:check": "eslint --ignore-path .eslintignore --ext .js,.ts .",
+    "lint-prettier": "npm run lint:check && npm run prettier:check",
     "start": "ts-node-dev --respawn --transpile-only src/server.ts",
     "lint:fix": "eslint --fix",
-    "prettier:check":"npx prettier --write ."
+    "prettier:check": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\""
   },
   "author": "tanvir",
   "license": "ISC",
+  "lint-staged": {
+    "src/**/*.ts": "npm run lint-prettier"
+  },
   "devDependencies": {
     "@types/cors": "^2.8.13",
     "@types/express": "^4.17.17",
     "@typescript-eslint/eslint-plugin": "^6.5.0",
     "@typescript-eslint/parser": "^6.5.0",
     "eslint": "^8.48.0",
+    "eslint-config-prettier": "^9.0.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
     "prettier": "^3.0.2",
     "typescript": "^5.2.2"
   },
