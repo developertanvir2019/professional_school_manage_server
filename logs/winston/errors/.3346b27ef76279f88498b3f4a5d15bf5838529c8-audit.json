@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "D:\\pHeroLevel2\\MileStone2_Mongoose\\school_menage_server\\logs\\winston\\errors\\.3346b27ef76279f88498b3f4a5d15bf5838529c8-audit.json",
+    "files": [
+        {
+            "date": 1693394303772,
+            "name": "D:\\pHeroLevel2\\MileStone2_Mongoose\\school_menage_server\\logs\\winston\\errors\\scl_error-2023-08-30-17.log",
+            "hash": "664175bdcde94f44900ca9bd8b0b9b77e700771ec568293d5d9800f5b7319c2a"
+        }
+    ],
+    "hashType": "sha256"
+}
