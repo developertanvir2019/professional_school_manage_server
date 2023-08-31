@@ -1,11 +1,12 @@
-import { NextFunction, Response, request } from 'express'
+import { NextFunction, Response, Request } from 'express'
 
 const globalErrorHandler = (
-  err,
-  req: request,
+  err: unknown,
+  req: Request,
   res: Response,
   next: NextFunction,
 ) => {
+  res.status(400).json({ error: err })
   next()
 }
 
