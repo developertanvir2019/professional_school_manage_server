@@ -1,5 +1,11 @@
+/* eslint-disable no-undefined */
+/* eslint-disable no-console */
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-unused-expressions */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { ErrorRequestHandler, NextFunction, Request, Response } from 'express'
 import config from '../../config'
+import { error_logger } from '../../shared/logger'
 import { IGenericErrorMessage } from '../../interfaces/Error'
 import handleValidationError from '../../errors/handleValidationError'
 import ApiError from '../../errors/ApiError'
@@ -10,8 +16,12 @@ const globalErrorHandler: ErrorRequestHandler = (
   res: Response,
   next: NextFunction,
 ) => {
+  config.env === 'development'
+    ? console.log(`🐱‍🏍 globalErrorHandler ~~`, { error })
+    : error_logger.error(`🐱‍🏍 globalErrorHandler ~~`, error)
+
   let statusCode = 500
-  let message = 'something went wrong'
+  let message = 'Something went wrong !'
   let errorMessages: IGenericErrorMessage[] = []
 
   if (error?.name === 'ValidationError') {
@@ -21,7 +31,7 @@ const globalErrorHandler: ErrorRequestHandler = (
     errorMessages = simplifiedError.errorMessages
   } else if (error instanceof ApiError) {
     statusCode = error?.statusCode
-    message = error?.message
+    message = error.message
     errorMessages = error?.message
       ? [
           {
@@ -46,10 +56,8 @@ const globalErrorHandler: ErrorRequestHandler = (
     success: false,
     message,
     errorMessages,
-    stack: config.env !== 'production' ? error?.stack : '',
+    stack: config.env !== 'production' ? error?.stack : undefined,
   })
-
-  next()
 }
 
 export default globalErrorHandler
