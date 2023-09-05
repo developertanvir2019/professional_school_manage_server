@@ -39,6 +39,16 @@
             "date": 1693895258677,
             "name": "D:\\pHeroLevel2\\MileStone2_Mongoose\\school_menage_server\\logs\\winston\\successes\\scl_success-2023-09-05-12.log",
             "hash": "b0d81d9e35fca95ad2c57b64254ea941773147946fa9992a574b5462767fc704"
+        },
+        {
+            "date": 1693898901573,
+            "name": "D:\\pHeroLevel2\\MileStone2_Mongoose\\school_menage_server\\logs\\winston\\successes\\scl_success-2023-09-05-13.log",
+            "hash": "0c3f7a77902de34709462e9ccfbff86c1776791fe7b1f046b64090811ea5d503"
+        },
+        {
+            "date": 1693903229114,
+            "name": "D:\\pHeroLevel2\\MileStone2_Mongoose\\school_menage_server\\logs\\winston\\successes\\scl_success-2023-09-05-14.log",
+            "hash": "9825522572a65eae3560b3b8d3d13ec61120746bec94767a3883f5b4b58b1187"
         }
     ],
     "hashType": "sha256"

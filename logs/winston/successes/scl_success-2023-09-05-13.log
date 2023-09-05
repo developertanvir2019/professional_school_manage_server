@@ -2,95 +2,71 @@
   message: 'database connected successfully',
   level: 'info',
   label: 'right meow!',
-  timestamp: '2023-09-05T06:33:59.640Z'
+  timestamp: '2023-09-05T07:28:22.932Z'
 }
 {
   message: 'Example app listening on port 5000',
   level: 'info',
   label: 'right meow!',
-  timestamp: '2023-09-05T06:33:59.687Z'
+  timestamp: '2023-09-05T07:28:22.962Z'
 }
 {
   message: 'database connected successfully',
   level: 'info',
   label: 'right meow!',
-  timestamp: '2023-09-05T06:37:22.236Z'
+  timestamp: '2023-09-05T07:29:23.574Z'
 }
 {
   message: 'Example app listening on port 5000',
   level: 'info',
   label: 'right meow!',
-  timestamp: '2023-09-05T06:37:22.297Z'
+  timestamp: '2023-09-05T07:29:23.599Z'
 }
 {
   message: 'database connected successfully',
   level: 'info',
   label: 'right meow!',
-  timestamp: '2023-09-05T06:37:55.630Z'
+  timestamp: '2023-09-05T07:30:05.652Z'
 }
 {
   message: 'Example app listening on port 5000',
   level: 'info',
   label: 'right meow!',
-  timestamp: '2023-09-05T06:37:55.651Z'
+  timestamp: '2023-09-05T07:30:05.668Z'
 }
 {
   message: 'database connected successfully',
   level: 'info',
   label: 'right meow!',
-  timestamp: '2023-09-05T06:39:22.550Z'
+  timestamp: '2023-09-05T07:31:11.270Z'
 }
 {
   message: 'Example app listening on port 5000',
   level: 'info',
   label: 'right meow!',
-  timestamp: '2023-09-05T06:39:22.583Z'
+  timestamp: '2023-09-05T07:31:11.298Z'
 }
 {
   message: 'database connected successfully',
   level: 'info',
   label: 'right meow!',
-  timestamp: '2023-09-05T06:39:38.865Z'
+  timestamp: '2023-09-05T07:31:25.314Z'
 }
 {
   message: 'Example app listening on port 5000',
   level: 'info',
   label: 'right meow!',
-  timestamp: '2023-09-05T06:39:38.902Z'
+  timestamp: '2023-09-05T07:31:25.344Z'
 }
 {
   message: 'database connected successfully',
   level: 'info',
   label: 'right meow!',
-  timestamp: '2023-09-05T06:40:31.560Z'
+  timestamp: '2023-09-05T07:32:01.944Z'
 }
 {
   message: 'Example app listening on port 5000',
   level: 'info',
   label: 'right meow!',
-  timestamp: '2023-09-05T06:40:31.586Z'
-}
-{
-  message: 'database connected successfully',
-  level: 'info',
-  label: 'right meow!',
-  timestamp: '2023-09-05T06:40:52.915Z'
-}
-{
-  message: 'Example app listening on port 5000',
-  level: 'info',
-  label: 'right meow!',
-  timestamp: '2023-09-05T06:40:52.948Z'
-}
-{
-  message: 'database connected successfully',
-  level: 'info',
-  label: 'right meow!',
-  timestamp: '2023-09-05T06:43:39.923Z'
-}
-{
-  message: 'Example app listening on port 5000',
-  level: 'info',
-  label: 'right meow!',
-  timestamp: '2023-09-05T06:43:39.959Z'
+  timestamp: '2023-09-05T07:32:01.975Z'
 }
