@@ -1,20 +1,20 @@
-import cors from 'cors'
-import express from 'express'
-import { Application, Request, Response } from 'express'
-import globalErrorHandler from './app/middlewares/GlobalErrorHandler'
-import { UserRoutes } from './app/modules/users/user.route'
+import cors from 'cors';
+import express from 'express';
+import { Application, Request, Response } from 'express';
+import globalErrorHandler from './app/middlewares/GlobalErrorHandler';
+import { UserRoutes } from './app/modules/users/user.route';
 
-const app: Application = express()
-app.use(cors())
-app.use(express.json())
-app.use(express.urlencoded({ extended: true }))
+const app: Application = express();
+app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-app.use('/api/v1/users', UserRoutes)
+app.use('/api/v1/users', UserRoutes);
 
-app.use(globalErrorHandler)
+app.use(globalErrorHandler);
 
 app.get('/', async (req: Request, res: Response) => {
-  res.send('working successfully for home route')
-})
+  res.send('working successfully for home route');
+});
 
-export default app
+export default app;
