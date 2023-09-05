@@ -49,6 +49,11 @@
             "date": 1693903229114,
             "name": "D:\\pHeroLevel2\\MileStone2_Mongoose\\school_menage_server\\logs\\winston\\successes\\scl_success-2023-09-05-14.log",
             "hash": "9825522572a65eae3560b3b8d3d13ec61120746bec94767a3883f5b4b58b1187"
+        },
+        {
+            "date": 1693906086528,
+            "name": "D:\\pHeroLevel2\\MileStone2_Mongoose\\school_menage_server\\logs\\winston\\successes\\scl_success-2023-09-05-15.log",
+            "hash": "8594a1a0fc8a4fc2a97a443a1861ea52ba89ab84c989484838f84f69a756aabc"
         }
     ],
     "hashType": "sha256"
