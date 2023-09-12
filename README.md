@@ -2,6 +2,16 @@
 
 # endPoint and direction
 
-## Post url : http://localhost:5000/api/v1/users/create-user
+## create user : /api/v1/users/create-user
 
-payload data formed : {"user":{"role":"student"}}
+expected body : {"user":{"role":"student"}}
+
+## create semester : /api/v1/academic-semesters/create-semester
+
+expected body:{
+"title":"Autumn",
+"year":2024,
+"code":"01",
+"startMonth":"April",
+"endMonth":"May"
+}

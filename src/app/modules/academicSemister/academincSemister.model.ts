@@ -3,6 +3,7 @@ import {
   IAcademicSemister,
   AcademicSemisterModel,
 } from './academicSemister.interface';
+import { month } from './academicSemister.constant';
 
 const academicSemisterSchema = new Schema<IAcademicSemister>(
   {
@@ -23,38 +24,12 @@ const academicSemisterSchema = new Schema<IAcademicSemister>(
     startMonth: {
       type: String,
       required: true,
-      enum: [
-        'January',
-        'February',
-        'March',
-        'April',
-        'May',
-        'June',
-        'July',
-        'August',
-        'September',
-        'October',
-        'November',
-        'December',
-      ],
+      enum: month,
     },
     endMonth: {
       type: String,
       required: true,
-      enum: [
-        'January',
-        'February',
-        'March',
-        'April',
-        'May',
-        'June',
-        'July',
-        'August',
-        'September',
-        'October',
-        'November',
-        'December',
-      ],
+      enum: month,
     },
   },
   {
