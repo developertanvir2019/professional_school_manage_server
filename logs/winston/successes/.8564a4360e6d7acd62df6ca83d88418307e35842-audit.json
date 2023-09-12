@@ -64,6 +64,16 @@
             "date": 1694505773794,
             "name": "D:\\pHeroLevel2\\MileStone2_Mongoose\\school_menage_server\\logs\\winston\\successes\\scl_success-2023-09-12-14.log",
             "hash": "87573fd0b23cda102581ce0064bb283983af4745af1aab436a243e0f7b606478"
+        },
+        {
+            "date": 1694510054509,
+            "name": "D:\\pHeroLevel2\\MileStone2_Mongoose\\school_menage_server\\logs\\winston\\successes\\scl_success-2023-09-12-15.log",
+            "hash": "a94c59f7f4680f5168b0d9d57f4ea1514bd6d2fb49739e7c5344d7d7a8d36159"
+        },
+        {
+            "date": 1694513238719,
+            "name": "D:\\pHeroLevel2\\MileStone2_Mongoose\\school_menage_server\\logs\\winston\\successes\\scl_success-2023-09-12-16.log",
+            "hash": "541fdbc02568a72b896848fe24ddc6d84b34f24912b97b77bc3d7698e1661a7c"
         }
     ],
     "hashType": "sha256"

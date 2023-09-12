@@ -10,3 +10,15 @@
   label: 'right meow!',
   timestamp: '2023-09-12T08:02:54.857Z'
 }
+{
+  message: 'database connected successfully',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-09-12T08:59:13.629Z'
+}
+{
+  message: 'Example app listening on port 5000',
+  level: 'info',
+  label: 'right meow!',
+  timestamp: '2023-09-12T08:59:13.652Z'
+}
