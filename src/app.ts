@@ -2,16 +2,16 @@ import cors from 'cors';
 import express from 'express';
 import { Application, Request, Response } from 'express';
 import globalErrorHandler from './app/middlewares/GlobalErrorHandler';
-import { UserRoutes } from './app/modules/users/user.route';
-import { AcademicSemisterRoutes } from './app/modules/academicSemister/academicSemister.route';
+import router from './app/routes';
 
 const app: Application = express();
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use('/api/v1/users', UserRoutes);
-app.use('/api/v1/academic-semesters', AcademicSemisterRoutes);
+app.use('/api/v1', router);
+// app.use('/api/v1/users', UserRoutes);
+// app.use('/api/v1/academic-semesters', AcademicSemisterRoutes);
 
 app.use(globalErrorHandler);
 
