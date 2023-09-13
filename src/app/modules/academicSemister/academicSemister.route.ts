@@ -10,4 +10,6 @@ router.post(
   AcademicSemisterContoller.createSemister,
 );
 
+router.get('/', AcademicSemisterContoller.getAllSemister);
+
 export const AcademicSemisterRoutes = router;
