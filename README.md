@@ -15,3 +15,7 @@ expected body:{
 "startMonth":"April",
 "endMonth":"May"
 }
+
+## get semester : /api/v1/academic-semesters?page=1&limit=3&sortBy=code&sortOrder=desc
+
+you can filter, short and implement pagination.
