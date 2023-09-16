@@ -27,10 +27,34 @@ type IGenericResponse<T> = {
 };
 
 const getAllSemister = async (
+  filters: { searchTerm: string },
   paginationOptions: IPaginationOption,
 ): Promise<IGenericResponse<IAcademicSemister[]>> => {
+  const academicSemesterSearchableFields = ['title', 'code', 'year'];
+  const { searchTerm, ...filtersData } = filters;
   const { page, limit, skip, sortBy, sortOrder } =
     paginationHelper.calculatePagination(paginationOptions);
+
+  const andConditions = [];
+  // Search needs $or for searching in specified fields
+  if (searchTerm) {
+    andConditions.push({
+      $or: academicSemesterSearchableFields.map(field => ({
+        [field]: {
+          $regex: searchTerm,
+          $options: 'i',
+        },
+      })),
+    });
+  }
+
+  if (Object.keys(filtersData).length) {
+    andConditions.push({
+      $and: Object.entries(filtersData).map(([field, value]) => ({
+        [field]: value,
+      })),
+    });
+  }
 
   const sortConditions: { [key: string]: SortOrder } = {};
   if (sortBy && sortOrder) {

@@ -31,10 +31,13 @@ const getAllSemister = catchAsync(
     //   sortBy: req.query.sortBy,
     //   sortOrder: req.query.shortOrder,
     // };
+    const filters = pick(req.query, ['searchTerm']);
     const paginationOptions = pick(req.query, paginationFields);
 
-    const result =
-      await AcademicSemisterService.getAllSemister(paginationOptions);
+    const result = await AcademicSemisterService.getAllSemister(
+      filters,
+      paginationOptions,
+    );
     sendResponse<IAcademicSemister[]>(res, {
       statusCode: httpStatus.OK,
       success: true,
