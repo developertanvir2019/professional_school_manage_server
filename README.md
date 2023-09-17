@@ -18,4 +18,4 @@ expected body:{
 
 ## get semester : /api/v1/academic-semesters?page=1&limit=3&sortBy=code&sortOrder=desc
 
-you can filter, short by answer and implement pagination.
+you can filter, short by answer and implement pagination. filtering option added
