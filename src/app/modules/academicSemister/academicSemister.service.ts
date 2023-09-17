@@ -60,8 +60,9 @@ const getAllSemister = async (
   if (sortBy && sortOrder) {
     sortConditions[sortBy] = sortOrder;
   }
-
-  const result = await AcademicSemister.find()
+  const whereConditions =
+    andConditions.length > 0 ? { $and: andConditions } : {};
+  const result = await AcademicSemister.find(whereConditions)
     .sort(sortConditions)
     .skip(skip)
     .limit(limit);
