@@ -1,100 +1,105 @@
 {
-  "keep": {
-    "days": true,
-    "amount": 14
-  },
-  "auditLog": "D:\\pHeroLevel2\\MileStone2_Mongoose\\school_menage_server\\logs\\winston\\errors\\.3346b27ef76279f88498b3f4a5d15bf5838529c8-audit.json",
-  "files": [
-    {
-      "date": 1693820320554,
-      "name": "D:\\pHeroLevel2\\MileStone2_Mongoose\\school_menage_server\\logs\\winston\\errors\\scl_error-2023-09-04-15.log",
-      "hash": "bd3c90bfe1a133369eed8e4b9cd15e5045677cf8ac746f717b2198225ba74d3d"
+    "keep": {
+        "days": true,
+        "amount": 14
     },
-    {
-      "date": 1693823268966,
-      "name": "D:\\pHeroLevel2\\MileStone2_Mongoose\\school_menage_server\\logs\\winston\\errors\\scl_error-2023-09-04-16.log",
-      "hash": "1980e933d2ef823f828169a19059b551889ed32ed95ae617768476ad6050769b"
-    },
-    {
-      "date": 1693895258690,
-      "name": "D:\\pHeroLevel2\\MileStone2_Mongoose\\school_menage_server\\logs\\winston\\errors\\scl_error-2023-09-05-12.log",
-      "hash": "e2281da27e0b7ae7c51fa7ba94c81c85d5c2210c499f360ad9ba985918cb89e2"
-    },
-    {
-      "date": 1693898901585,
-      "name": "D:\\pHeroLevel2\\MileStone2_Mongoose\\school_menage_server\\logs\\winston\\errors\\scl_error-2023-09-05-13.log",
-      "hash": "8df46eb2beeb85d7bb449d261e38376d75be9a2e58d1c2130e9d7710506594c9"
-    },
-    {
-      "date": 1693903229139,
-      "name": "D:\\pHeroLevel2\\MileStone2_Mongoose\\school_menage_server\\logs\\winston\\errors\\scl_error-2023-09-05-14.log",
-      "hash": "b687ab2359271661e08df19c7975d53309d9b467d8736bcbd4467ddc38308ad7"
-    },
-    {
-      "date": 1693906086601,
-      "name": "D:\\pHeroLevel2\\MileStone2_Mongoose\\school_menage_server\\logs\\winston\\errors\\scl_error-2023-09-05-15.log",
-      "hash": "3eba3715d1cb1dbfe5cfc29669f67ea42371e2e64bd2d2c323cf868a5610b6b3"
-    },
-    {
-      "date": 1694505223910,
-      "name": "D:\\pHeroLevel2\\MileStone2_Mongoose\\school_menage_server\\logs\\winston\\errors\\scl_error-2023-09-12-13.log",
-      "hash": "83bbd0cbae93080360715068d750243895ba51bd45b02c8a68c93ed5a5fe6119"
-    },
-    {
-      "date": 1694505773802,
-      "name": "D:\\pHeroLevel2\\MileStone2_Mongoose\\school_menage_server\\logs\\winston\\errors\\scl_error-2023-09-12-14.log",
-      "hash": "ee0957cab0de6cc6aea9726681d2d398ef17acf060298b4b21adbcc8b22cb31a"
-    },
-    {
-      "date": 1694510054529,
-      "name": "D:\\pHeroLevel2\\MileStone2_Mongoose\\school_menage_server\\logs\\winston\\errors\\scl_error-2023-09-12-15.log",
-      "hash": "0510b87767a80a8e27700e55f19be55e5da59e991c3c08f0518adc7a44cb6d99"
-    },
-    {
-      "date": 1694513238729,
-      "name": "D:\\pHeroLevel2\\MileStone2_Mongoose\\school_menage_server\\logs\\winston\\errors\\scl_error-2023-09-12-16.log",
-      "hash": "4827aa5322aece9e9df0d58d2e7e528cd52848d5a31c5816170a477bf9e621b5"
-    },
-    {
-      "date": 1694516425386,
-      "name": "D:\\pHeroLevel2\\MileStone2_Mongoose\\school_menage_server\\logs\\winston\\errors\\scl_error-2023-09-12-17.log",
-      "hash": "77c74d4bdb8eaa32e728a5fa49d019cf54e5359bf4d80a6e6c8a1b09e66fa5f7"
-    },
-    {
-      "date": 1694591778969,
-      "name": "D:\\pHeroLevel2\\MileStone2_Mongoose\\school_menage_server\\logs\\winston\\errors\\scl_error-2023-09-13-13.log",
-      "hash": "3ec2064e1dfff168be4e2910b91f9a4eb6531980463d98f6b183bf0d6764b044"
-    },
-    {
-      "date": 1694594361100,
-      "name": "D:\\pHeroLevel2\\MileStone2_Mongoose\\school_menage_server\\logs\\winston\\errors\\scl_error-2023-09-13-14.log",
-      "hash": "d40c28f4ec79415dface2da79a4a5b68cec7381f9045f53c0952e1ab49221407"
-    },
-    {
-      "date": 1694595640740,
-      "name": "D:\\pHeroLevel2\\MileStone2_Mongoose\\school_menage_server\\logs\\winston\\errors\\scl_error-2023-09-13-15.log",
-      "hash": "fb763d6f3380aa0f90005ae94bb6197d6d95b13d788c1e01ce50877b8549671c"
-    },
-    {
-      "date": 1694599451804,
-      "name": "D:\\pHeroLevel2\\MileStone2_Mongoose\\school_menage_server\\logs\\winston\\errors\\scl_error-2023-09-13-16.log",
-      "hash": "c03be2d16dd2e8bfad958d40fffbcb4c3b02644aaddb12937024d340ec62e428"
-    },
-    {
-      "date": 1694683144830,
-      "name": "D:\\pHeroLevel2\\MileStone2_Mongoose\\school_menage_server\\logs\\winston\\errors\\scl_error-2023-09-14-15.log",
-      "hash": "a39aa45b342afb5dd3a4ace0e4f1940a6187ff8ee8e79abfadc725ab25646db0"
-    },
-    {
-      "date": 1694856557316,
-      "name": "D:\\pHeroLevel2\\MileStone2_Mongoose\\school_menage_server\\logs\\winston\\errors\\scl_error-2023-09-16-15.log",
-      "hash": "ebc8b6eebb4ba45c0ee0d47b609dc927c52099a9ff663da9d5cbacf5ccd46408"
-    },
-    {
-      "date": 1694862736726,
-      "name": "D:\\pHeroLevel2\\MileStone2_Mongoose\\school_menage_server\\logs\\winston\\errors\\scl_error-2023-09-16-17.log",
-      "hash": "5f90b2aaebcb4023d8200fe3fc17ac2c4ac927e69cfacd09b9a22e962c330193"
-    }
-  ],
-  "hashType": "sha256"
+    "auditLog": "D:\\pHeroLevel2\\MileStone2_Mongoose\\school_menage_server\\logs\\winston\\errors\\.3346b27ef76279f88498b3f4a5d15bf5838529c8-audit.json",
+    "files": [
+        {
+            "date": 1693820320554,
+            "name": "D:\\pHeroLevel2\\MileStone2_Mongoose\\school_menage_server\\logs\\winston\\errors\\scl_error-2023-09-04-15.log",
+            "hash": "bd3c90bfe1a133369eed8e4b9cd15e5045677cf8ac746f717b2198225ba74d3d"
+        },
+        {
+            "date": 1693823268966,
+            "name": "D:\\pHeroLevel2\\MileStone2_Mongoose\\school_menage_server\\logs\\winston\\errors\\scl_error-2023-09-04-16.log",
+            "hash": "1980e933d2ef823f828169a19059b551889ed32ed95ae617768476ad6050769b"
+        },
+        {
+            "date": 1693895258690,
+            "name": "D:\\pHeroLevel2\\MileStone2_Mongoose\\school_menage_server\\logs\\winston\\errors\\scl_error-2023-09-05-12.log",
+            "hash": "e2281da27e0b7ae7c51fa7ba94c81c85d5c2210c499f360ad9ba985918cb89e2"
+        },
+        {
+            "date": 1693898901585,
+            "name": "D:\\pHeroLevel2\\MileStone2_Mongoose\\school_menage_server\\logs\\winston\\errors\\scl_error-2023-09-05-13.log",
+            "hash": "8df46eb2beeb85d7bb449d261e38376d75be9a2e58d1c2130e9d7710506594c9"
+        },
+        {
+            "date": 1693903229139,
+            "name": "D:\\pHeroLevel2\\MileStone2_Mongoose\\school_menage_server\\logs\\winston\\errors\\scl_error-2023-09-05-14.log",
+            "hash": "b687ab2359271661e08df19c7975d53309d9b467d8736bcbd4467ddc38308ad7"
+        },
+        {
+            "date": 1693906086601,
+            "name": "D:\\pHeroLevel2\\MileStone2_Mongoose\\school_menage_server\\logs\\winston\\errors\\scl_error-2023-09-05-15.log",
+            "hash": "3eba3715d1cb1dbfe5cfc29669f67ea42371e2e64bd2d2c323cf868a5610b6b3"
+        },
+        {
+            "date": 1694505223910,
+            "name": "D:\\pHeroLevel2\\MileStone2_Mongoose\\school_menage_server\\logs\\winston\\errors\\scl_error-2023-09-12-13.log",
+            "hash": "83bbd0cbae93080360715068d750243895ba51bd45b02c8a68c93ed5a5fe6119"
+        },
+        {
+            "date": 1694505773802,
+            "name": "D:\\pHeroLevel2\\MileStone2_Mongoose\\school_menage_server\\logs\\winston\\errors\\scl_error-2023-09-12-14.log",
+            "hash": "ee0957cab0de6cc6aea9726681d2d398ef17acf060298b4b21adbcc8b22cb31a"
+        },
+        {
+            "date": 1694510054529,
+            "name": "D:\\pHeroLevel2\\MileStone2_Mongoose\\school_menage_server\\logs\\winston\\errors\\scl_error-2023-09-12-15.log",
+            "hash": "0510b87767a80a8e27700e55f19be55e5da59e991c3c08f0518adc7a44cb6d99"
+        },
+        {
+            "date": 1694513238729,
+            "name": "D:\\pHeroLevel2\\MileStone2_Mongoose\\school_menage_server\\logs\\winston\\errors\\scl_error-2023-09-12-16.log",
+            "hash": "4827aa5322aece9e9df0d58d2e7e528cd52848d5a31c5816170a477bf9e621b5"
+        },
+        {
+            "date": 1694516425386,
+            "name": "D:\\pHeroLevel2\\MileStone2_Mongoose\\school_menage_server\\logs\\winston\\errors\\scl_error-2023-09-12-17.log",
+            "hash": "77c74d4bdb8eaa32e728a5fa49d019cf54e5359bf4d80a6e6c8a1b09e66fa5f7"
+        },
+        {
+            "date": 1694591778969,
+            "name": "D:\\pHeroLevel2\\MileStone2_Mongoose\\school_menage_server\\logs\\winston\\errors\\scl_error-2023-09-13-13.log",
+            "hash": "3ec2064e1dfff168be4e2910b91f9a4eb6531980463d98f6b183bf0d6764b044"
+        },
+        {
+            "date": 1694594361100,
+            "name": "D:\\pHeroLevel2\\MileStone2_Mongoose\\school_menage_server\\logs\\winston\\errors\\scl_error-2023-09-13-14.log",
+            "hash": "d40c28f4ec79415dface2da79a4a5b68cec7381f9045f53c0952e1ab49221407"
+        },
+        {
+            "date": 1694595640740,
+            "name": "D:\\pHeroLevel2\\MileStone2_Mongoose\\school_menage_server\\logs\\winston\\errors\\scl_error-2023-09-13-15.log",
+            "hash": "fb763d6f3380aa0f90005ae94bb6197d6d95b13d788c1e01ce50877b8549671c"
+        },
+        {
+            "date": 1694599451804,
+            "name": "D:\\pHeroLevel2\\MileStone2_Mongoose\\school_menage_server\\logs\\winston\\errors\\scl_error-2023-09-13-16.log",
+            "hash": "c03be2d16dd2e8bfad958d40fffbcb4c3b02644aaddb12937024d340ec62e428"
+        },
+        {
+            "date": 1694683144830,
+            "name": "D:\\pHeroLevel2\\MileStone2_Mongoose\\school_menage_server\\logs\\winston\\errors\\scl_error-2023-09-14-15.log",
+            "hash": "a39aa45b342afb5dd3a4ace0e4f1940a6187ff8ee8e79abfadc725ab25646db0"
+        },
+        {
+            "date": 1694856557316,
+            "name": "D:\\pHeroLevel2\\MileStone2_Mongoose\\school_menage_server\\logs\\winston\\errors\\scl_error-2023-09-16-15.log",
+            "hash": "ebc8b6eebb4ba45c0ee0d47b609dc927c52099a9ff663da9d5cbacf5ccd46408"
+        },
+        {
+            "date": 1694862736726,
+            "name": "D:\\pHeroLevel2\\MileStone2_Mongoose\\school_menage_server\\logs\\winston\\errors\\scl_error-2023-09-16-17.log",
+            "hash": "5f90b2aaebcb4023d8200fe3fc17ac2c4ac927e69cfacd09b9a22e962c330193"
+        },
+        {
+            "date": 1695015103202,
+            "name": "D:\\pHeroLevel2\\MileStone2_Mongoose\\school_menage_server\\logs\\winston\\errors\\scl_error-2023-09-18-11.log",
+            "hash": "1c12ebca875762caec578e6ff3b105d317c3a3578fa01c51d373db791b31987c"
+        }
+    ],
+    "hashType": "sha256"
 }
