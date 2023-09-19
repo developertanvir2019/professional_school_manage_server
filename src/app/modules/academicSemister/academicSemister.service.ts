@@ -27,7 +27,7 @@ type IGenericResponse<T> = {
 };
 
 const getAllSemister = async (
-  filters: { searchTerm: string },
+  filters: { searchTerm?: string },
   paginationOptions: IPaginationOption,
 ): Promise<IGenericResponse<IAcademicSemister[]>> => {
   const academicSemesterSearchableFields = ['title', 'code', 'year'];
