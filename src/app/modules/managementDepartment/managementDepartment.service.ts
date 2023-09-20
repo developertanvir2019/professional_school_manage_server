@@ -10,14 +10,14 @@ import {
 import { ManagementDepartment } from './managementDepartment.model';
 
 const createDepartment = async (
-  payload: IManagementDepartment
+  payload: IManagementDepartment,
 ): Promise<IManagementDepartment | null> => {
   const result = await ManagementDepartment.create(payload);
   return result;
 };
 
 const getSingleDepartment = async (
-  id: string
+  id: string,
 ): Promise<IManagementDepartment | null> => {
   const result = await ManagementDepartment.findById(id);
   return result;
@@ -25,7 +25,7 @@ const getSingleDepartment = async (
 
 const getAllDepartments = async (
   filters: IManagementDepartmentFilters,
-  paginationOptions: IPaginationOptions
+  paginationOptions: IPaginationOptions,
 ): Promise<IGenericResponse<IManagementDepartment[]>> => {
   // Extract searchTerm to implement search query
   const { searchTerm, ...filtersData } = filters;
@@ -80,22 +80,22 @@ const getAllDepartments = async (
 
 const updateDepartment = async (
   id: string,
-  payload: Partial<IManagementDepartment>
+  payload: Partial<IManagementDepartment>,
 ): Promise<IManagementDepartment | null> => {
   const result = await ManagementDepartment.findOneAndUpdate(
     { _id: id },
     payload,
     {
       new: true,
-    }
+    },
   );
   return result;
 };
 
 const deleteDepartment = async (
-  id: string
+  id: string,
 ): Promise<IManagementDepartment | null> => {
-  console.log(id)
+  console.log(id);
   const result = await ManagementDepartment.findByIdAndDelete(id);
   return result;
 };

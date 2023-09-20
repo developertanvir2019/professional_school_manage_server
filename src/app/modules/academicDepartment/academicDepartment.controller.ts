@@ -11,7 +11,7 @@ import { AcademicDepartmentService } from './academicDepartment.service';
 const createDepartment = catchAsync(async (req: Request, res: Response) => {
   const { ...academicDepartmentData } = req.body;
   const result = await AcademicDepartmentService.createDepartment(
-    academicDepartmentData
+    academicDepartmentData,
   );
 
   sendResponse<IAcademicDepartment>(res, {
@@ -40,7 +40,7 @@ const getAllDepartments = catchAsync(async (req: Request, res: Response) => {
 
   const result = await AcademicDepartmentService.getAllDepartments(
     filters,
-    paginationOptions
+    paginationOptions,
   );
 
   sendResponse<IAcademicDepartment[]>(res, {

@@ -12,9 +12,9 @@ router.get(
   auth(
     ENUM_USER_ROLE.SUPER_ADMIN,
     ENUM_USER_ROLE.ADMIN,
-    ENUM_USER_ROLE.FACULTY
+    ENUM_USER_ROLE.FACULTY,
   ),
-  FacultyController.getSingleFaculty
+  FacultyController.getSingleFaculty,
 );
 
 router.get(
@@ -22,22 +22,22 @@ router.get(
   auth(
     ENUM_USER_ROLE.SUPER_ADMIN,
     ENUM_USER_ROLE.ADMIN,
-    ENUM_USER_ROLE.FACULTY
+    ENUM_USER_ROLE.FACULTY,
   ),
-  FacultyController.getAllFaculties
+  FacultyController.getAllFaculties,
 );
 
 router.patch(
   '/:id',
   validateRequest(FacultyValidation.updateFacultyZodSchema),
   auth(ENUM_USER_ROLE.SUPER_ADMIN, ENUM_USER_ROLE.ADMIN),
-  FacultyController.updateFaculty
+  FacultyController.updateFaculty,
 );
 
 router.delete(
   '/:id',
   auth(ENUM_USER_ROLE.SUPER_ADMIN),
-  FacultyController.deleteFaculty
+  FacultyController.deleteFaculty,
 );
 
 export const FacultyRoutes = router;

@@ -10,10 +10,10 @@ const router = express.Router();
 router.post(
   '/create-department',
   validateRequest(
-    AcademicDepartmentValidation.createAcademicDepartmentZodSchema
+    AcademicDepartmentValidation.createAcademicDepartmentZodSchema,
   ),
   auth(ENUM_USER_ROLE.SUPER_ADMIN, ENUM_USER_ROLE.ADMIN),
-  AcademicDepartmentController.createDepartment
+  AcademicDepartmentController.createDepartment,
 );
 
 router.get('/:id', AcademicDepartmentController.getSingleDepartment);
@@ -23,16 +23,16 @@ router.get('/', AcademicDepartmentController.getAllDepartments);
 router.patch(
   '/:id',
   validateRequest(
-    AcademicDepartmentValidation.updateAcademicDepartmentZodSchema
+    AcademicDepartmentValidation.updateAcademicDepartmentZodSchema,
   ),
   auth(ENUM_USER_ROLE.SUPER_ADMIN, ENUM_USER_ROLE.ADMIN),
-  AcademicDepartmentController.updateDepartment
+  AcademicDepartmentController.updateDepartment,
 );
 
 router.delete(
   '/:id',
   auth(ENUM_USER_ROLE.SUPER_ADMIN),
-  AcademicDepartmentController.deleteDepartment
+  AcademicDepartmentController.deleteDepartment,
 );
 
 export const AcademicDepartmentRoutes = router;

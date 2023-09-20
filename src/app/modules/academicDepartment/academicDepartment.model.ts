@@ -22,7 +22,7 @@ const AcademicDepartmentSchema = new Schema<
     syncId: {
       type: String,
       required: true,
-      unique: true
+      unique: true,
     },
   },
   {
@@ -30,7 +30,7 @@ const AcademicDepartmentSchema = new Schema<
     toJSON: {
       virtuals: true,
     },
-  }
+  },
 );
 
 export const AcademicDepartment = model<

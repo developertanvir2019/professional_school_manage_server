@@ -12,7 +12,7 @@ router.post(
   '/create-semester',
   validateRequest(AcademicSemesterValidation.createAcademicSemesterZodSchema),
   auth(ENUM_USER_ROLE.SUPER_ADMIN, ENUM_USER_ROLE.ADMIN),
-  AcademicSemesterController.createSemester
+  AcademicSemesterController.createSemester,
 );
 
 router.get(
@@ -21,9 +21,9 @@ router.get(
     ENUM_USER_ROLE.SUPER_ADMIN,
     ENUM_USER_ROLE.ADMIN,
     ENUM_USER_ROLE.FACULTY,
-    ENUM_USER_ROLE.STUDENT
+    ENUM_USER_ROLE.STUDENT,
   ),
-  AcademicSemesterController.getSingleSemester
+  AcademicSemesterController.getSingleSemester,
 );
 
 router.get(
@@ -34,20 +34,20 @@ router.get(
   //   ENUM_USER_ROLE.FACULTY,
   //   ENUM_USER_ROLE.STUDENT
   // ),
-  AcademicSemesterController.getAllSemesters
+  AcademicSemesterController.getAllSemesters,
 );
 
 router.patch(
   '/:id',
   validateRequest(AcademicSemesterValidation.updateAcademicSemesterZodSchema),
   auth(ENUM_USER_ROLE.SUPER_ADMIN, ENUM_USER_ROLE.ADMIN),
-  AcademicSemesterController.updateSemester
+  AcademicSemesterController.updateSemester,
 );
 
 router.delete(
   '/:id',
   auth(ENUM_USER_ROLE.SUPER_ADMIN, ENUM_USER_ROLE.ADMIN),
-  AcademicSemesterController.deleteSemester
+  AcademicSemesterController.deleteSemester,
 );
 
 export const AcademicSemesterRoutes = router;

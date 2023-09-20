@@ -27,7 +27,7 @@ const getAllStudents = catchAsync(async (req: Request, res: Response) => {
 
   const result = await StudentService.getAllStudents(
     filters,
-    paginationOptions
+    paginationOptions,
   );
 
   sendResponse<IStudent[]>(res, {

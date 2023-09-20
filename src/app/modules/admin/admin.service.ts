@@ -17,7 +17,7 @@ const getSingleAdmin = async (id: string): Promise<IAdmin | null> => {
 
 const getAllAdmins = async (
   filters: IAdminFilters,
-  paginationOptions: IPaginationOptions
+  paginationOptions: IPaginationOptions,
 ): Promise<IGenericResponse<IAdmin[]>> => {
   // Extract searchTerm to implement search query
   const { searchTerm, ...filtersData } = filters;
@@ -77,7 +77,7 @@ const getAllAdmins = async (
 
 const updateAdmin = async (
   id: string,
-  payload: Partial<IAdmin>
+  payload: Partial<IAdmin>,
 ): Promise<IAdmin | null> => {
   const isExist = await Admin.findOne({ id });
 

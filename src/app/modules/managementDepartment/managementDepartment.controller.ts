@@ -10,9 +10,8 @@ import { ManagementDepartmentService } from './managementDepartment.service';
 
 const createDepartment = catchAsync(async (req: Request, res: Response) => {
   const { ...departmentData } = req.body;
-  const result = await ManagementDepartmentService.createDepartment(
-    departmentData
-  );
+  const result =
+    await ManagementDepartmentService.createDepartment(departmentData);
 
   sendResponse<IManagementDepartment>(res, {
     statusCode: httpStatus.OK,
@@ -28,7 +27,7 @@ const getAllDepartments = catchAsync(async (req: Request, res: Response) => {
 
   const result = await ManagementDepartmentService.getAllDepartments(
     filters,
-    paginationOptions
+    paginationOptions,
   );
 
   sendResponse<IManagementDepartment[]>(res, {
@@ -58,7 +57,7 @@ const updateDepartment = catchAsync(
     const updatedData = req.body;
     const result = await ManagementDepartmentService.updateDepartment(
       id,
-      updatedData
+      updatedData,
     );
 
     sendResponse<IManagementDepartment>(res, {
@@ -67,7 +66,7 @@ const updateDepartment = catchAsync(
       message: 'Management department updated successfully',
       data: result,
     });
-  })
+  }),
 );
 
 const deleteDepartment = catchAsync(async (req: Request, res: Response) => {

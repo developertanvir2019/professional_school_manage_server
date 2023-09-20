@@ -17,7 +17,7 @@ const createFaculty = async (payload: IAcademicFaculty) => {
 };
 
 const getSingleFaculty = async (
-  id: string
+  id: string,
 ): Promise<IAcademicFaculty | null> => {
   const result = await AcademicFaculty.findById(id);
   return result;
@@ -25,7 +25,7 @@ const getSingleFaculty = async (
 
 const getAllFaculties = async (
   filters: IAcademicFacultyFilters,
-  paginationOptions: IPaginationOptions
+  paginationOptions: IPaginationOptions,
 ): Promise<IGenericResponse<IAcademicFaculty[]>> => {
   // Extract searchTerm to implement search query
   const { searchTerm, ...filtersData } = filters;
@@ -48,7 +48,7 @@ const getAllFaculties = async (
   }
 
   // Filters needs $and to fullfill all the conditions
-  console.log(filtersData)
+  console.log(filtersData);
   if (Object.keys(filtersData).length) {
     andConditions.push({
       $and: Object.entries(filtersData).map(([field, value]) => ({
@@ -86,7 +86,7 @@ const getAllFaculties = async (
 
 const updateFaculty = async (
   id: string,
-  payload: Partial<IAcademicFaculty>
+  payload: Partial<IAcademicFaculty>,
 ): Promise<IAcademicFaculty | null> => {
   const result = await AcademicFaculty.findOneAndUpdate({ _id: id }, payload, {
     new: true,
@@ -95,27 +95,31 @@ const updateFaculty = async (
 };
 
 const deleteByIdFromDB = async (
-  id: string
+  id: string,
 ): Promise<IAcademicFaculty | null> => {
   const result = await AcademicFaculty.findByIdAndDelete(id);
   return result;
 };
 
-const insertIntoDBFromEvent = async (e: AcademicFacultyCreatedEvent): Promise<void> => {
+const insertIntoDBFromEvent = async (
+  e: AcademicFacultyCreatedEvent,
+): Promise<void> => {
   await AcademicFaculty.create({
     syncId: e.id,
-    title: e.title
+    title: e.title,
   });
 };
 
-const updateOneInDBFromEvent = async (e: AcademicFacultyUpdatedEvent): Promise<void> => {
+const updateOneInDBFromEvent = async (
+  e: AcademicFacultyUpdatedEvent,
+): Promise<void> => {
   await AcademicFaculty.findOneAndUpdate(
     { syncId: e.id },
     {
       $set: {
-        title: e.title
-      }
-    }
+        title: e.title,
+      },
+    },
   );
 };
 
@@ -131,5 +135,5 @@ export const AcademicFacultyService = {
   deleteByIdFromDB,
   insertIntoDBFromEvent,
   updateOneInDBFromEvent,
-  deleteOneFromDBFromEvent
+  deleteOneFromDBFromEvent,
 };

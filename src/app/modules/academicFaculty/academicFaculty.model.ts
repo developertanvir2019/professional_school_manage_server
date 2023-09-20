@@ -17,18 +17,18 @@ const AcademicFacultySchema = new Schema<
     syncId: {
       type: String,
       required: false,
-      unique: true
-    }
+      unique: true,
+    },
   },
   {
     timestamps: true,
     toJSON: {
       virtuals: true,
     },
-  }
+  },
 );
 
 export const AcademicFaculty = model<IAcademicFaculty, AcademicFacultyModel>(
   'AcademicFaculty',
-  AcademicFacultySchema
+  AcademicFacultySchema,
 );

@@ -1,15 +1,15 @@
 {
-    "keep": {
-        "days": true,
-        "amount": 14
-    },
-    "auditLog": "D:\\pHeroLevel2\\school_menage_server\\logs\\winston\\successes\\.ed20cb9b06b85ca8f74fd2498c05e7de8e86a50a-audit.json",
-    "files": [
-        {
-            "date": 1695202785517,
-            "name": "D:\\pHeroLevel2\\school_menage_server\\logs\\winston\\successes\\phu-2023-20-09-15-success.log",
-            "hash": "17c0718c92976ec9304c9c517db94fe7c4951ef3d13f830ed9161c53451f3a5e"
-        }
-    ],
-    "hashType": "sha256"
+  "keep": {
+    "days": true,
+    "amount": 14
+  },
+  "auditLog": "D:\\pHeroLevel2\\school_menage_server\\logs\\winston\\successes\\.ed20cb9b06b85ca8f74fd2498c05e7de8e86a50a-audit.json",
+  "files": [
+    {
+      "date": 1695202785517,
+      "name": "D:\\pHeroLevel2\\school_menage_server\\logs\\winston\\successes\\phu-2023-20-09-15-success.log",
+      "hash": "17c0718c92976ec9304c9c517db94fe7c4951ef3d13f830ed9161c53451f3a5e"
+    }
+  ],
+  "hashType": "sha256"
 }

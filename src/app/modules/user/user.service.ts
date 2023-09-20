@@ -22,7 +22,7 @@ import {
 
 const createStudent = async (
   student: IStudent,
-  user: IUser
+  user: IUser,
 ): Promise<IUser | null> => {
   // If password is not given,set default password
   if (!user.password) {
@@ -32,7 +32,7 @@ const createStudent = async (
   user.role = 'student';
 
   const academicsemester = await AcademicSemester.findById(
-    student.academicSemester
+    student.academicSemester,
   ).lean();
 
   let newUserAllData = null;
@@ -88,7 +88,10 @@ const createStudent = async (
   }
 
   if (newUserAllData) {
-    await RedisClient.publish(EVENT_STUDENT_CREATED, JSON.stringify(newUserAllData.student))
+    await RedisClient.publish(
+      EVENT_STUDENT_CREATED,
+      JSON.stringify(newUserAllData.student),
+    );
   }
 
   return newUserAllData;
@@ -96,7 +99,7 @@ const createStudent = async (
 
 const createFaculty = async (
   faculty: IFaculty,
-  user: IUser
+  user: IUser,
 ): Promise<IUser | null> => {
   // If password is not given,set default password
   if (!user.password) {
@@ -151,10 +154,13 @@ const createFaculty = async (
         },
       ],
     });
-  };
+  }
 
   if (newUserAllData) {
-    await RedisClient.publish(EVENT_FACULTY_CREATED, JSON.stringify(newUserAllData.faculty));
+    await RedisClient.publish(
+      EVENT_FACULTY_CREATED,
+      JSON.stringify(newUserAllData.faculty),
+    );
   }
 
   return newUserAllData;
@@ -162,7 +168,7 @@ const createFaculty = async (
 
 const createAdmin = async (
   admin: IAdmin,
-  user: IUser
+  user: IUser,
 ): Promise<IUser | null> => {
   // If password is not given,set default password
   if (!user.password) {

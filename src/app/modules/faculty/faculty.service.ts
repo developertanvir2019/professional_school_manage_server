@@ -9,7 +9,10 @@ import httpStatus from 'http-status';
 import ApiError from '../../../errors/ApiError';
 import { RedisClient } from '../../../shared/redis';
 import { User } from '../user/user.model';
-import { EVENT_FACULTY_UPDATED, facultySearchableFields } from './faculty.constant';
+import {
+  EVENT_FACULTY_UPDATED,
+  facultySearchableFields,
+} from './faculty.constant';
 import { IFaculty, IFacultyFilters } from './faculty.interface';
 import { Faculty } from './faculty.model';
 
@@ -23,7 +26,7 @@ const getSingleFaculty = async (id: string): Promise<IFaculty | null> => {
 
 const getAllFaculties = async (
   filters: IFacultyFilters,
-  paginationOptions: IPaginationOptions
+  paginationOptions: IPaginationOptions,
 ): Promise<IGenericResponse<IFaculty[]>> => {
   // Extract searchTerm to implement search query
   const { searchTerm, ...filtersData } = filters;
@@ -81,7 +84,7 @@ const getAllFaculties = async (
 
 const updateFaculty = async (
   id: string,
-  payload: Partial<IFaculty>
+  payload: Partial<IFaculty>,
 ): Promise<IFaculty | null> => {
   const isExist = await Faculty.findOne({ id });
 
@@ -99,15 +102,13 @@ const updateFaculty = async (
     });
   }
 
-  const result = await Faculty.findOneAndUpdate({ id }, updatedFacultyData,
-    { new: true }
-  )
+  const result = await Faculty.findOneAndUpdate({ id }, updatedFacultyData, {
+    new: true,
+  })
     .populate('academicFaculty')
-    .populate('academicDepartment')
-    ;
-
+    .populate('academicDepartment');
   if (result) {
-    await RedisClient.publish(EVENT_FACULTY_UPDATED, JSON.stringify(result))
+    await RedisClient.publish(EVENT_FACULTY_UPDATED, JSON.stringify(result));
   }
   return result;
 };

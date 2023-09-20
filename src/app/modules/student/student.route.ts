@@ -13,21 +13,21 @@ router.get(
     ENUM_USER_ROLE.ADMIN,
     ENUM_USER_ROLE.FACULTY,
     ENUM_USER_ROLE.FACULTY,
-    ENUM_USER_ROLE.STUDENT
+    ENUM_USER_ROLE.STUDENT,
   ),
-  StudentController.getSingleStudent
+  StudentController.getSingleStudent,
 );
 router.delete(
   '/:id',
   auth(ENUM_USER_ROLE.SUPER_ADMIN),
-  StudentController.deleteStudent
+  StudentController.deleteStudent,
 );
 
 router.patch(
   '/:id',
   validateRequest(StudentValidaion.updateStudentZodSchema),
   auth(ENUM_USER_ROLE.SUPER_ADMIN, ENUM_USER_ROLE.ADMIN),
-  StudentController.updateStudent
+  StudentController.updateStudent,
 );
 router.get(
   '/',
@@ -36,9 +36,9 @@ router.get(
     ENUM_USER_ROLE.ADMIN,
     ENUM_USER_ROLE.FACULTY,
     ENUM_USER_ROLE.FACULTY,
-    ENUM_USER_ROLE.STUDENT
+    ENUM_USER_ROLE.STUDENT,
   ),
-  StudentController.getAllStudents
+  StudentController.getAllStudents,
 );
 
 export const StudentRoutes = router;

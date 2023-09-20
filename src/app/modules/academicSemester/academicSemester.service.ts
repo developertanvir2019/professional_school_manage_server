@@ -16,7 +16,7 @@ import {
 import { AcademicSemester } from './academicSemester.model';
 
 const createSemester = async (
-  payload: IAcademicSemester
+  payload: IAcademicSemester,
 ): Promise<IAcademicSemester> => {
   if (academicSemesterTitleCodeMapper[payload.title] !== payload.code) {
     throw new ApiError(httpStatus.BAD_REQUEST, 'Invalid Semester Code');
@@ -26,7 +26,7 @@ const createSemester = async (
 };
 
 const getSingleSemester = async (
-  id: string
+  id: string,
 ): Promise<IAcademicSemester | null> => {
   const result = await AcademicSemester.findById(id);
   return result;
@@ -34,7 +34,7 @@ const getSingleSemester = async (
 
 const getAllsemesters = async (
   filters: IAcademicSemesterFilters,
-  paginationOptions: IPaginationOptions
+  paginationOptions: IPaginationOptions,
 ): Promise<IGenericResponse<IAcademicSemester[]>> => {
   // Extract searchTerm to implement search query
   const { searchTerm, ...filtersData } = filters;
@@ -89,7 +89,7 @@ const getAllsemesters = async (
 
 const updateSemester = async (
   id: string,
-  payload: Partial<IAcademicSemester>
+  payload: Partial<IAcademicSemester>,
 ): Promise<IAcademicSemester | null> => {
   if (
     payload.title &&
@@ -106,15 +106,14 @@ const updateSemester = async (
 };
 
 const deleteSemester = async (
-  id: string
+  id: string,
 ): Promise<IAcademicSemester | null> => {
   const result = await AcademicSemester.findByIdAndDelete(id);
   return result;
 };
 
-
 const createSemesterFromEvent = async (
-  e: IAcademicSemesterCreatedEvent
+  e: IAcademicSemesterCreatedEvent,
 ): Promise<void> => {
   await AcademicSemester.create({
     title: e.title,
@@ -122,12 +121,12 @@ const createSemesterFromEvent = async (
     code: e.code,
     startMonth: e.startMonth,
     endMonth: e.endMonth,
-    syncId: e.id
+    syncId: e.id,
   });
 };
 
 const updateOneIntoDBFromEvent = async (
-  e: IAcademicSemesterCreatedEvent
+  e: IAcademicSemesterCreatedEvent,
 ): Promise<void> => {
   await AcademicSemester.findOneAndUpdate(
     { syncId: e.id },
@@ -137,10 +136,10 @@ const updateOneIntoDBFromEvent = async (
         year: e.year,
         code: e.code,
         startMonth: e.startMonth,
-        endMonth: e.endMonth
-      }
-    }
-  )
+        endMonth: e.endMonth,
+      },
+    },
+  );
 };
 
 const deleteOneFromDBFromEvent = async (syncId: string): Promise<void> => {
@@ -155,5 +154,5 @@ export const AcademicSemesterService = {
   deleteSemester,
   createSemesterFromEvent,
   updateOneIntoDBFromEvent,
-  deleteOneFromDBFromEvent
+  deleteOneFromDBFromEvent,
 };

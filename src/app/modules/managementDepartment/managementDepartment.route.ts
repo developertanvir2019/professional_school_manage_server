@@ -10,10 +10,10 @@ const router = express.Router();
 router.post(
   '/create-department',
   validateRequest(
-    ManagementDepartmentValidation.createManagementDepartmentZodSchema
+    ManagementDepartmentValidation.createManagementDepartmentZodSchema,
   ),
   auth(ENUM_USER_ROLE.SUPER_ADMIN, ENUM_USER_ROLE.ADMIN),
-  ManagementDepartmentController.createDepartment
+  ManagementDepartmentController.createDepartment,
 );
 
 router.get(
@@ -22,24 +22,24 @@ router.get(
     ENUM_USER_ROLE.SUPER_ADMIN,
     ENUM_USER_ROLE.ADMIN,
     ENUM_USER_ROLE.FACULTY,
-    ENUM_USER_ROLE.STUDENT
+    ENUM_USER_ROLE.STUDENT,
   ),
-  ManagementDepartmentController.getSingleDepartment
+  ManagementDepartmentController.getSingleDepartment,
 );
 
 router.patch(
   '/:id',
   validateRequest(
-    ManagementDepartmentValidation.updateManagementDepartmentZodSchema
+    ManagementDepartmentValidation.updateManagementDepartmentZodSchema,
   ),
   auth(ENUM_USER_ROLE.SUPER_ADMIN, ENUM_USER_ROLE.ADMIN),
-  ManagementDepartmentController.updateDepartment
+  ManagementDepartmentController.updateDepartment,
 );
 
 router.delete(
   '/:id',
   auth(ENUM_USER_ROLE.SUPER_ADMIN),
-  ManagementDepartmentController.deleteDepartment
+  ManagementDepartmentController.deleteDepartment,
 );
 
 router.get(
@@ -49,9 +49,9 @@ router.get(
     ENUM_USER_ROLE.ADMIN,
     ENUM_USER_ROLE.FACULTY,
     ENUM_USER_ROLE.FACULTY,
-    ENUM_USER_ROLE.STUDENT
+    ENUM_USER_ROLE.STUDENT,
   ),
-  ManagementDepartmentController.getAllDepartments
+  ManagementDepartmentController.getAllDepartments,
 );
 
 export const ManagementDepartmentRoutes = router;

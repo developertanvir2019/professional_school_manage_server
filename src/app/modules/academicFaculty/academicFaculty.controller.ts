@@ -10,9 +10,8 @@ import { AcademicFacultyService } from './academicFaculty.service';
 
 const createFaculty = catchAsync(async (req: Request, res: Response) => {
   const { ...academicFacultyData } = req.body;
-  const result = await AcademicFacultyService.createFaculty(
-    academicFacultyData
-  );
+  const result =
+    await AcademicFacultyService.createFaculty(academicFacultyData);
   sendResponse<IAcademicFaculty>(res, {
     statusCode: httpStatus.OK,
     success: true,
@@ -39,7 +38,7 @@ const getAllFaculties = catchAsync(async (req: Request, res: Response) => {
 
   const result = await AcademicFacultyService.getAllFaculties(
     filters,
-    paginationOptions
+    paginationOptions,
   );
 
   sendResponse<IAcademicFaculty[]>(res, {
@@ -64,7 +63,7 @@ const updateFaculty = catchAsync(
       message: 'Academic faculty updated successfully',
       data: result,
     });
-  })
+  }),
 );
 
 const deleteFaculty = catchAsync(async (req: Request, res: Response) => {

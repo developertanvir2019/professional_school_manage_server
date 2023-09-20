@@ -17,7 +17,7 @@ const createStudent: RequestHandler = catchAsync(
       message: 'Student created successfully!',
       data: result,
     });
-  }
+  },
 );
 
 const createFaculy: RequestHandler = catchAsync(
@@ -31,7 +31,7 @@ const createFaculy: RequestHandler = catchAsync(
       message: 'Faculty created successfully!',
       data: result,
     });
-  }
+  },
 );
 
 const createAdmin: RequestHandler = catchAsync(
@@ -45,7 +45,7 @@ const createAdmin: RequestHandler = catchAsync(
       message: 'Admin created successfully!',
       data: result,
     });
-  }
+  },
 );
 
 export const UserController = {
