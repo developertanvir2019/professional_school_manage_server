@@ -1,4 +1,4 @@
-import { IGenericErrorMessage } from './Error';
+import { IGenericErrorMessage } from './error';
 
 export type IGenericResponse<T> = {
   meta: {

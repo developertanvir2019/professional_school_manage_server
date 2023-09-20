@@ -1,30 +1,42 @@
+/* eslint-disable no-console */
+import { Server } from 'http';
 import mongoose from 'mongoose';
 import app from './app';
-import config from './config';
-import { logger, error_logger } from './shared/logger';
-import { Server } from 'http';
+import subscribeToEvents from './app/events';
+import config from './config/index';
+import { errorlogger } from './shared/logger';
+import { RedisClient } from './shared/redis';
 
 process.on('uncaughtException', error => {
-  error_logger.error(error);
+  errorlogger.error(error);
   process.exit(1);
 });
+
 let server: Server;
-async function main() {
+
+async function bootstrap() {
   try {
-    await mongoose.connect(config.database_url as string);
-    logger.info('database connected successfully');
-    server = app.listen(config.port, () => {
-      logger.info(`Example app listening on port ${config.port}`);
+    await RedisClient.connect().then(() => {
+      subscribeToEvents()
     });
-  } catch (error) {
-    error_logger.error('Failed to connect to database', error);
+
+
+    await mongoose.connect(config.database_url as string);
+    // logger.info(`🛢   Database is connected successfully`);
+    console.log(`🛢   Database is connected successfully`);
+
+    server = app.listen(config.port, () => {
+      // logger.info(`Application  listening on port ${config.port}`);
+      console.log(`Application  listening on port ${config.port}`);
+    });
+  } catch (err) {
+    errorlogger.error('Failed to connect database', err);
   }
 
   process.on('unhandledRejection', error => {
-    console.log('unhandled rejection is detected .we are closing the server');
     if (server) {
       server.close(() => {
-        error_logger.error(error);
+        errorlogger.error(error);
         process.exit(1);
       });
     } else {
@@ -33,12 +45,11 @@ async function main() {
   });
 }
 
-main();
+bootstrap();
 
-process.on('SIGTERM', () => {
-  logger.info('Sigterm is received');
-
-  if (server) {
-    server.close();
-  }
-});
+// process.on('SIGTERM', () => {
+//   logger.info('SIGTERM is received');
+//   if (server) {
+//     server.close();
+//   }
+// });
